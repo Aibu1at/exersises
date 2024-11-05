@@ -7,5 +7,6 @@ for _ in range(n + m):
         kash.add(child)
     else:
         kash.remove(child)
-
-print(*(list(kash).sort()) if kash else "Таких нет", sep="\n")
+kash_list = list(kash)
+kash_list.sort()
+print(*kash_list if kash else "Таких нет", sep=("\n" if kash else None))
